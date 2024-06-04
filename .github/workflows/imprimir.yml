@@ -1,4 +1,4 @@
-name: imprimir datos y filtrar
+name: imprimir datos y filtrar segundo intento
 
 on:
   schedule:
@@ -20,7 +20,7 @@ jobs:
       - name: imprimir tabla nueva y vieja
         run: |
           echo "tabla desde la fuente"
-          cat data.csv
+          cat datos.csv
           echo "filtrando datos"
-          grep -lv hotmail data.csv
+          grep -lv hotmail datos.csv
 
