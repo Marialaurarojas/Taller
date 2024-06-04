@@ -1,4 +1,4 @@
-name: ejemplo
+name: imprimir datos y filtrar
 
 on:
   schedule:
@@ -17,8 +17,10 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Run command in the vm
+      - name: imprimir tabla nueva y vieja
         run: |
-          echo "Hola, estoy dentro de un Action ... es maria"
-          ls -lhrt
+          echo "tabla desde la fuente"
+          cat data.csv
+          echo "filtrando datos"
+          grep -lv hotmail data.csv
 
